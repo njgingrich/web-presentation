@@ -8,6 +8,7 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -31,17 +32,23 @@
 				</section>
 				<section>
 					<h2>Background</h2>
-					<p>
-						There have been many advancements in HTML and CSS to improve web design,
-						and to make it easier for developers to make websites. Along with this 
-						are javascript site frameworks, and new browser APIs to make the browser
-						act more like a native part of a mobile OS or simply have more features.
-					</p>
-					<ul>
-						<li>New layout and design techniques</li>
-						<li>Javascript frameworks</li>
-						<li>New web technology</li>
-					</ul>
+					<div class="columns">
+						<div class="col-half">
+							<p>
+								There have been many advancements in HTML and CSS to improve web design,
+								and to make it easier for developers to make websites. Along with this 
+								are javascript site frameworks, and new browser APIs to make the browser
+								act more like a native part of a mobile OS or simply have more features.
+							</p>
+						</div>
+						<div class="col-half">
+							<ul>
+								<li>New layout and design techniques</li>
+								<li>Javascript frameworks</li>
+								<li>New web technology</li>
+							</ul>
+						</div>
+					</div>
 				</section>
 
 				<!-- HTML5 & CSS3 -->
@@ -60,6 +67,45 @@
 							<li>article, section, aside</li>
 							<li>audio, video, canvas, picture</li>
 						</ul>
+						<div class="columns">
+							<div class="col-half">
+								<span class="nope-text">No more!</span>
+								<pre><code data-trim>
+									&lt;div class="nav"&gt;
+									  &lt;ul&gt;
+									    &lt;li&gt;Item 1&lt;/li&gt;
+									    &lt;li&gt;Item 2&lt;/li&gt;
+									  &lt;/ul&gt;
+									&lt;/div&gt;
+									&lt;div class="header"&gt;
+									  &lt;!-- header stuff --&gt;
+									&lt;/div&gt;
+									&lt;div class="container"&gt;
+									  &lt;div class="article"&gt;
+									    &lt;!-- content --&gt;
+									  &lt;/div&gt;
+									&lt;/div&gt;
+								</code></pre>
+							</div>
+							<div class="col-half">
+								<span class="yep-text">Much better!</span>
+								<pre><code data-trim>
+									&lt;nav&gt;
+									  &lt;ul&gt;
+									    &lt;li&gt;Item 1&lt;/li&gt;
+									    &lt;li&gt;Item 2&lt;/li&gt;
+									  &lt;/ul&gt;
+									&lt;/nav&gt;
+									&lt;header&gt;
+									  &lt;!-- header stuff --&gt;
+									&lt;/header&gt;
+									&lt;div class="container"&gt;
+									  &lt;article&gt;
+									    &lt;!-- content --&gt;
+									  &lt;/article&gt;
+									&lt;/div&gt;
+								</code></pre>
+						</div>
 					</section>
 					<!-- Layouts -->
 					<section>
@@ -69,6 +115,11 @@
 								Doing layout with HTML and CSS has always been a challenge.
 								First we had tables, then floating. Now, we have more options.
 							</p>
+							<div>
+								<span class="nope-text">Table layouts?</span>
+								<img class="thumb" src="img/thumbs_down.png">
+							</div>
+							<img src="img/cusack_tables.png">
 						</section>
 						<section>
 							<h3>Flexbox</h3>
@@ -76,13 +127,103 @@
 								Flexbox is a new layout technique that is very intuitive and
 								makes more complicated layouts dead simple.
 							</p>
+							<img src="img/flex_direction.gif">
+						</section>
+						<section>
+							<img src="img/flex_justify.gif">
+							<img src="img/flex_align.gif">
+							<p class="credits">Images from https://medium.freecodecamp.com/an-animated-guide-to-flexbox-d280cf6afc35</p>
+						</section>
+						<section>
+							<h3>How it Works</h3>
+							<pre><code data-trim>
+								.container {
+								  display: flex;
+								  justify-content: row-reverse;
+								  align-items: center;
+								}
+
+								.child {
+								  flex: 1 1 250px; /* grow | shrink | basis */
+								}
+							</code></pre>
+						</section>
+						<section>
+							<h3>Vertical Centering?</h3>
+							<img src="img/vertical_centering.png">		
+							<p class="credits">Image from https://css-tricks.com/centering-css-complete-guide/</p>					
+						</section>
+						<section>
+							<h3 class="yep-text">Easy as Pie!</h3>
+							<pre><code data-trim>
+								.container {
+								  display: flex;
+								  justify-content: center;
+								  align-items: center;
+								}
+							</code></pre>
+							<h3>Just one item centered?</h3>
+							<div class="columns">
+								<div class="col-half">
+									<pre><code data-trim>
+										<div class="container">
+										  <div>Blah</div>
+										  <div class="centered">Blah</div>
+										  <div>Blah</div>
+										  <div>Blah</div>
+										</div>
+									</code></pre>
+								</div>
+								<div class="col-half">
+									<pre><code data-trim>
+										.container {
+											display: flex;
+											align-items: flex-start;
+										}
+										.centered {
+											align-self: center;
+										}
+									</code></pre>
+								</div>
+							</div>
 						</section>
 						<section>
 							<h3>CSS Grid</h3>
-							<p>
-								Still an upcoming standard, CSS Grid will replace old HTML table
-								layout design and have incredible flexibility.
-							</p>
+							<div class="columns">
+								<div class="col-half">
+									<pre><code data-trim>
+										.container {
+										  display: grid;
+										  grid-gap: 10px;
+										  grid-template-columns: 100px 100px 100px;
+										}
+										.a {
+										  grid-column: 1 / 3;
+										  grid-row: 1;
+										}
+										.b {
+										  grid-column: 3 ;
+										  grid-row: 1 / 3;
+										}
+										.c {
+										  grid-column: 1 ;
+										  grid-row: 2 ;
+										}
+										.d {
+										  grid-column: 2;
+										  grid-row: 2;
+										}
+									</code></pre>
+								</div>
+								<div class="col-half">
+									<p>
+										Still an upcoming standard, CSS Grid will replace old HTML table
+										layout design and have incredible flexibility.
+									</p>
+									<img src="img/css_grid_example.png">
+								</div>
+							</div>
+							<p class="credits">Taken from http://gridbyexample.com/examples/example5/</p>
 						</section>
 					</section>
 					<!-- CSS Variables -->
@@ -93,6 +234,23 @@
 							CSS pre-processors like LESS or SASS. (which are still useful for 
 							mixins and similar).
 						</p>
+						<pre><code data-trim>
+							:root {
+							  /* Palette generated by Material Palette - materialpalette.com/blue-grey/red */
+							  --primary-color-dark:   #455A64
+							  --primary-color:        #607D8B
+							  --primary-color-light:  #CFD8DC
+							  --primary-color-text:   #FFFFFF
+							  --accent-color:         #FF5252
+							  --primary-text-color:   #212121
+							  --secondary-text-color: #757575
+							  --divider-color:        #BDBDBD
+							}
+
+							.container {
+							  background: var(--primary-color-dark);
+							}
+						</code></pre>
 					</section>
 
 					<!-- Media queries -->
@@ -101,28 +259,38 @@
 						<p>
 							Media queries let CSS react differently to different-sized viewports.
 						<p>
-					</section>
+						<pre><code data-trim>
+							.container {
+							  width: 400px;
+							  margin: 0 auto;
+							}
 
-					<!-- Viewport sizing -->
-					<section>
-						<h3>Viewport & Sizing</h3>
-						<p>
-							vw and vh.
-						</p>
+							@media only screen and (min-width: 670px) {
+							  .container {
+							    width: 600px;
+							  }
+							}
+
+							@media only screen and (min-width: 1080px) {
+							  .container {
+							    width: 900px;
+							  }
+							}
+						</code></pre>
 					</section>
 
 					<!-- Upcoming -->
 					<section>
 						<section>
-							<h2>THE FUTURE</h2>
+							<h1>THE FUTURE</h1>
 						</section>
 						<!-- Things like picture -->
 						<section>
 							<h3>Better Responsiveness</h3>
 							<ul>
-								<li>multiple images within &lt;picture&gt;</li>
+								<li>Multiple images within &lt;picture&gt;</li>
 								<li>CSS grid</li>
-								<li>Web APIs</li>
+								<li>New Web APIs</li>
 							</ul>
 						</section>
 						<section>
@@ -149,12 +317,22 @@
 					</section>
 					<section>
 						<h3>Popular JS Frameworks</h3>
-						<ul>
-							<li>React</li>
-							<li>Angular</li>
-							<li>Ember</li>
-							<li>Vue</li>
-						</ul>
+						<div class="columns">
+							<div style="width:30%;margin-left:20vw;display:flex;flex-direction:column;align-items:center;">
+								<img class="thumb-vert" src="img/react_logo.png">
+								<img class="thumb-vert" src="img/angular_logo.png">
+								<img class="thumb-vert" src="img/ember_logo.png">
+								<img class="thumb-vert" src="img/vue_logo.png">
+							</div>
+							<div style="width:60%;text-align:left;">
+								<ul>
+									<li>React</li>
+									<li>Angular</li>
+									<li>Ember</li>
+									<li>Vue</li>
+								</ul>
+							</div>
+						</div>
 					</section>
 					<section>
 						<h3>Vue.js</h3>
@@ -163,6 +341,7 @@
 							on the view layer. It also works well in tandem with other libraries
 							to create single page apps like the other major frameworks.
 						</p>
+						<img src="img/vue_logo.png">
 					</section>
 				</section>
 				<section>
@@ -198,10 +377,35 @@
 							workers.
 						</p>
 					</section>
+					<section>
+						<h3>Progressive Web Apps</h3>
+						<p>
+							The culmination of all these new technologies are <strong>progressive web apps</strong>, 
+							which are a new way to deliver native-like experience to mobile especially.
+						</p>
+					</section>
 				</section>
 				<!-- Demo -->
 				<section>
-					<h2>Demo</h2>
+					<section>
+						<h2>Demo</h2>
+					</section>
+					<section>
+						<h3>Getting Started</h3>
+						<!-- code for registering -->
+					</section>
+					<section>
+						<h3>Going Offline</h3>
+						<!-- caching -->
+					</section>
+					<section>
+						<h3>Offline First</h3>
+						<!-- read from cache -->
+					</section>
+					<section>
+						<h3>Update Your Content</h3>
+						<!-- activate & message -->
+					</section>
 				</section>
 
 			</div>

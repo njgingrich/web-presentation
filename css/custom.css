@@ -1,0 +1,43 @@
+.columns {
+    display: flex;
+    align-items: center;
+}
+
+.col-half {
+    width: 48%;
+    margin: 1vw;
+}
+
+.credits {
+    font-size: .5em;
+}
+
+.nope-text {
+    font-weight: 800;
+    color: red;
+}
+
+.yep-text {
+    font-weight: 800;
+    color: green;
+}
+
+.thumb {
+    width: 64px;
+    height: 64px;
+}
+
+.thumb-vert {
+    height: 64px;
+}
+
+.reveal section img {
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    background: none;
+}
+
+.reveal pre code {
+    max-height: 900px;
+}
