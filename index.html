@@ -8,7 +8,7 @@
   <title>reveal.js</title>
 
   <link rel="stylesheet" href="css/reveal.css">
-  <link rel="stylesheet" href="css/theme/black.css">
+  <link rel="stylesheet" href="css/theme/blood.css">
   <link rel="stylesheet" href="css/custom.css">
 
   <!-- Theme used for syntax highlighting of code -->
@@ -36,11 +36,7 @@
         <h2>Background</h2>
         <div class="columns">
           <div class="col-half">
-            <p>
-              There have been many advancements in HTML and CSS to improve web design, and to make it easier for developers to make websites.
-              Along with this are javascript site frameworks, and new browser APIs to make the browser act more like a native
-              part of a mobile OS or simply have more features.
-            </p>
+            <img src="img/html_css.png">
           </div>
           <div class="col-half">
             <ul>
@@ -50,6 +46,12 @@
             </ul>
           </div>
         </div>
+
+				<aside class="notes">
+					There have been many advancements in HTML and CSS to improve web design, and to make it easier for developers to make websites.
+					Along with this are javascript site frameworks, and new browser APIs to make the browser act more like a native
+					part of a mobile OS or simply have more features.
+				</aside>
       </section>
 
       <!-- HTML5 & CSS3 -->
@@ -81,59 +83,82 @@
           <div class="col-half">
             <span class="nope-text">No more!</span>
             <pre><code data-trim>
-									&lt;div class="nav"&gt;
-									  &lt;ul&gt;
-									    &lt;li&gt;Item 1&lt;/li&gt;
-									    &lt;li&gt;Item 2&lt;/li&gt;
-									  &lt;/ul&gt;
-									&lt;/div&gt;
-									&lt;div class="header"&gt;
-									  &lt;!-- header stuff --&gt;
-									&lt;/div&gt;
-									&lt;div class="container"&gt;
-									  &lt;div class="article"&gt;
-									    &lt;!-- content --&gt;
-									  &lt;/div&gt;
-									&lt;/div&gt;
+									<div class="nav">
+									  <ul>
+									    <li>Item 1</li>
+									    <li>Item 2</li>
+									  </ul>
+									</div>
+									<div class="header">
+									  <!-- header stuff -->
+									</div>
+									<div class="container">
+									  <div class="article">
+									    <!-- content -->
+									  </div>
+									</div>
 								</code></pre>
           </div>
           <div class="col-half">
             <span class="yep-text">Much better!</span>
             <pre><code data-trim>
-									&lt;nav&gt;
-									  &lt;ul&gt;
-									    &lt;li&gt;Item 1&lt;/li&gt;
-									    &lt;li&gt;Item 2&lt;/li&gt;
-									  &lt;/ul&gt;
-									&lt;/nav&gt;
-									&lt;header&gt;
-									  &lt;!-- header stuff --&gt;
-									&lt;/header&gt;
-									&lt;div class="container"&gt;
-									  &lt;article&gt;
-									    &lt;!-- content --&gt;
-									  &lt;/article&gt;
-									&lt;/div&gt;
+									<nav>
+									  <ul>
+									    <li>Item 1</li>
+									    <li>Item 2</li>
+									  </ul>
+									</nav>
+									<header>
+									  <!-- header stuff -->
+									</header>
+									<div class="container">
+									  <article>
+									    <!-- content -->
+									  </article>
+									</div>
 								</code></pre>
           </div>
+
+				<aside class="notes">
+					In the past, people had to get by mostly with divs and classes to mark content.
+					Now in the HTML5 spec are semantic elements, which provide information to search
+					engines, among other things, about what content to prioritize. 
+					Canvas is big because it allows game development solely in HTML, CSS, and JS,
+					without needing flash or other 3rd party libraries. Audio and video tags also
+					help make the web a first-party fully featured platform.
+				</aside>
       </section>
       <!-- Layouts -->
       <section>
         <section>
           <h3>CSS Layouts</h3>
           <p>
-            Doing layout with HTML and CSS has always been a challenge. First we had tables, then floating. Now, we have more options.
+            Doing layout with HTML and CSS has always been a challenge. First we had tables, then floats. Now, we have more options.
           </p>
-          <div>
-            <span class="nope-text">Table layouts?</span>
-            <img class="thumb" src="img/thumbs_down.png">
-          </div>
-          <img src="img/cusack_tables.png">
+					<div class="fragment">
+						<div>
+							<span class="nope-text">Table layouts?</span>
+							<img class="thumb" src="img/thumbs_down.png">
+						</div>
+						<img src="img/cusack_tables.png">
+					</div>
+
+					<aside class="notes">
+						In the past (think 20 years ago), layout was done with HTML tables. I have some really old
+						designs I did growing up with tables, because it was the only way to do it. 
+						Sites like this, that are built with tables, still work fine, and are obviously still functional,
+						but make the layout more complicated (and the actual content more separated), and harder to
+						customize.
+						Then, and still	the main way to do layout, is with floats. A block can be floated left or 
+						right, and given a width.
+						Now, two new standards are emerging - one that can now be used pretty much everywhere outside
+						of Explorer, and one that will be available within the year in new browsers.
+					</aside>
         </section>
         <section>
           <h3>Flexbox</h3>
           <p>
-            Flexbox is a new layout technique that is very intuitive and makes more complicated layouts dead simple.
+						Flexbox is a new layout technique that is very intuitive (sorta)  and makes more complicated layouts dead simple.
           </p>
           <h3>How it Works</h3>
           <pre><code data-trim>
@@ -147,6 +172,13 @@
               flex: 1 1 250px; /* grow | shrink | basis */
             }
           </code></pre>
+
+					<aside class="notes">
+						Flex is deceptively simple - hard to grasp, but easy once you get it.
+						Once a container is defined as flex, it can be given a few properties:
+						direction, justify-content, align-items, grow, shrink, basis, wrap, and
+						order. 
+					</aside>
         </section>
         <section>
           <img src="img/flex_direction.gif">
@@ -162,7 +194,13 @@
             }
           </code></pre>
           <p class="credits">Images from https://medium.freecodecamp.com/an-animated-guide-to-flexbox-d280cf6afc35</p>
-        </section>
+        
+					<aside class="notes">
+						Flex direction has the following properties:
+						row, column, and row/column reverse.
+						This aligns elements horizontally or vertically.
+					</aside>
+				</section>
         <section>
           <img src="img/flex_justify.gif">
           <pre><code data-trim>
@@ -177,7 +215,19 @@
             }
           </code></pre>
           <p class="credits">Images from https://medium.freecodecamp.com/an-animated-guide-to-flexbox-d280cf6afc35</p>
-        </section>
+        
+					<aside class="notes">
+						justify-content determines how the content is laid out on the main axis.
+						The main axis is defined by direction (default is row).
+						flex-start | flex-end | center | space-between | space-around
+
+						Space-between is when items are evenly distributed, but the first and last
+						elements are on the two ends.
+						Space-around is when each item has equal space on both sides of it. This means
+						that each end will have one 'unit' of space from the edge, and two 'units'
+						between each element.
+					</aside>
+				</section>
         <section>
           <img src="img/flex_align.gif">
           <pre><code data-trim>
@@ -192,7 +242,12 @@
             }
           </code></pre>
           <p class="credits">Images from https://medium.freecodecamp.com/an-animated-guide-to-flexbox-d280cf6afc35</p>
-        </section>
+        
+					<aside class="notes">
+						align-items works along the cross axis (the opposite of flex-direction).
+						flex-start | flex-end | center | baseline | stretch
+					</aside>
+				</section>
         <section>
           <h3>How it Works</h3>
           <pre><code data-trim>
@@ -206,21 +261,44 @@
               flex: 1 1 250px; /* grow | shrink | basis */
             }
           </code></pre>
+
+					<aside class="notes">
+						The flex property combines grow, shrink, and basis. 
+						This defines the ability for a flex item to grow if necessary. 
+						It accepts a unitless value that serves as a proportion. 
+						It dictates what amount of the available space inside the flex 
+						container the item should take up.
+
+						If all items have flex-grow set to 1, the remaining space in the container 
+						will be distributed equally to all children. If one of the children has a 
+						value of 2, the remaining space would take up twice as much space as the others 
+						(or it will try to, at least). (default 1).
+
+						Shrink determines the ability for an item to shrink if necessary (default 1).
+
+						Basis defines the default size of an element (%, em, 'auto', 'content') (default auto)
+					</aside>
         </section>
         <section>
           <h3>Vertical Centering?</h3>
           <img src="img/vertical_centering.png">
           <p class="credits">Image from https://css-tricks.com/centering-css-complete-guide/</p>
-        </section>
+        
+					<aside class="notes">
+						As an example of the nice things flexbox can do, vertical centering used to be super
+						hard, with multiple cases depending on the type of data you wanted to center.
+						Now...
+					</aside>
+				</section>
         <section>
           <h3 class="yep-text">Easy as Pie!</h3>
           <pre><code data-trim>
-								.container {
-								  display: flex;
-								  justify-content: center;
-								  align-items: center;
-								}
-							</code></pre>
+						.container {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+						}
+					</code></pre>
           <h3>Just one item centered?</h3>
           <div class="columns">
             <div class="col-half">
@@ -245,34 +323,38 @@
 									</code></pre>
             </div>
           </div>
+
+					<aside class="notes">
+
+					</aside>
         </section>
         <section>
           <h3>CSS Grid</h3>
           <div class="columns">
             <div class="col-half">
               <pre><code data-trim>
-										.container {
-										  display: grid;
-										  grid-gap: 10px;
-										  grid-template-columns: 100px 100px 100px;
-										}
-										.a {
-										  grid-column: 1 / 3;
-										  grid-row: 1;
-										}
-										.b {
-										  grid-column: 3 ;
-										  grid-row: 1 / 3;
-										}
-										.c {
-										  grid-column: 1 ;
-										  grid-row: 2 ;
-										}
-										.d {
-										  grid-column: 2;
-										  grid-row: 2;
-										}
-									</code></pre>
+								.container {
+									display: grid;
+									grid-gap: 10px;
+									grid-template-columns: 100px 100px 100px;
+								}
+								.a {
+									grid-column: 1 / 3;
+									grid-row: 1;
+								}
+								.b {
+									grid-column: 3 ;
+									grid-row: 1 / 3;
+								}
+								.c {
+									grid-column: 1 ;
+									grid-row: 2 ;
+								}
+								.d {
+									grid-column: 2;
+									grid-row: 2;
+								}
+							</code></pre>
             </div>
             <div class="col-half">
               <p>
@@ -282,78 +364,128 @@
             </div>
           </div>
           <p class="credits">Taken from http://gridbyexample.com/examples/example5/</p>
+
+					<aside class="notes">
+						You may be thinking - you just made fun of tables for layout! However, the problem 
+						with tables back in the day wasn't the table, but that it had to use HTML markup which
+						increased the pageload and make the code clunkier to read. Doing it in CSS is way cleaner.
+
+						grid-column/grid-row define the start and end 'tracks', or grid lines to base on.
+					</aside>
         </section>
       </section>
       <!-- CSS Variables -->
       <section>
         <h3>CSS Variables</h3>
         <p>
-          With the introduction of CSS variables, we can lessen the need for CSS pre-processors like LESS or SASS. (which are still
-          useful for mixins and similar).
+          With the introduction of CSS variables, we can lessen the need for CSS pre-processors like LESS or SASS.
         </p>
         <pre><code data-trim>
-							:root {
-							  /* Palette generated by Material Palette - materialpalette.com/blue-grey/red */
-							  --primary-color-dark:   #455A64
-							  --primary-color:        #607D8B
-							  --primary-color-light:  #CFD8DC
-							  --primary-color-text:   #FFFFFF
-							  --accent-color:         #FF5252
-							  --primary-text-color:   #212121
-							  --secondary-text-color: #757575
-							  --divider-color:        #BDBDBD
-							}
+					:root {
+					  /* Palette generated by Material Palette - materialpalette.com/blue-grey/red */
+					  --primary-color-dark:   #455A64
+					  --primary-color:        #607D8B
+					  --primary-color-light:  #CFD8DC
+					  --primary-color-text:   #FFFFFF
+					  --accent-color:         #FF5252
+					  --primary-text-color:   #212121
+					  --secondary-text-color: #757575
+					  --divider-color:        #BDBDBD
+					}
 
-							.container {
-							  background: var(--primary-color-dark);
-							}
-						</code></pre>
+					.container {
+					  background: var(--primary-color-dark);
+					}
+				</code></pre>
+
+				<aside class="notes">
+					Though this isn't as clean as SASS's syntax, which uses $, having it done in CSS means our
+					changes can be made instantly, without having to recompile CSS (and introducing more complexity)
+					with builders like grunt or gulp or webpack or browserify.....
+
+					SASS/LESS are still good for things like mixins, which can generate all the css for complicated
+					properties, or things that have multiple vendor prefixes.
+				</aside>
       </section>
 
       <!-- Media queries -->
       <section>
         <h3>Media Queries</h3>
         <p>
-          Media queries let CSS react differently to different-sized viewports.
-          <p>
-            <pre><code data-trim>
-							.container {
-							  width: 400px;
-							  margin: 0 auto;
-							}
+					Media queries let CSS react differently to different-sized viewports.
+				<p>
+				<pre><code data-trim>
+					.container {
+					  width: 400px;
+					  margin: 0 auto;
+					}
 
-							@media only screen and (min-width: 670px) {
-							  .container {
-							    width: 600px;
-							  }
-							}
+					@media only screen and (min-width: 670px) {
+					  .container {
+					     width: 600px;
+					  }
+					}
 
-							@media only screen and (min-width: 1080px) {
-							  .container {
-							    width: 900px;
-							  }
-							}
-						</code></pre>
-      </section>
+					@media only screen and (min-width: 1080px) {
+					  .container {
+					     width: 900px;
+					  }
+					}
+				</code></pre>
+
+				<aside class="notes">
+					Media queries are great for adjusting layout based on the browser. 
+					If someone is using a phone, doing a mobile first layout means they
+					get the CSS they need right away. Larger screens can then be adapted
+					with more appropriate layouts (wider content pages, different styling,
+					larger images...) with media queries.
+				</aside>
+			</section>
 
       <!-- Upcoming -->
       <section>
         <section>
           <h1>THE FUTURE</h1>
         </section>
-        <!-- Things like picture -->
         <section>
           <h3>Fetch API</h3>
           <p>
             The Fetch API is a new standard for receiving data from sources, replacing XMLHttpRequest.
           </p>
+					<pre><code data-trim>
+						var myImage = document.querySelector('img');
+
+						fetch('flowers.jpg').then(function(response) {
+						  return response.blob();
+
+						}).then(function(myBlob) {
+						  var objectURL = URL.createObjectURL(myBlob);
+						  myImage.src = objectURL;
+						});
+					</code></pre>
+
+					<aside class="notes">
+						Fetch has generic Request and Response objects, to simplify the API and make
+						it easy to use. 
+					</aside>
         </section>
         <section>
           <h3>Web Components</h3>
-          <p>
-            Already introduced with libraries like Polymer, web components are a way (using the shadow DOM) to write custom HTML tags
-            such as &lt;calendar&gt; or &lt;modal&gt;, tags that are specified in your HTML/JS files.
-          </p>
+					<div class="columns">
+						<div class="col-half">
+							<img src="img/web_component.png">
+						</div>
+						<div class="col-half">
+							<p>
+								Already introduced with libraries like Polymer, web components are a way (using the shadow DOM) to write custom HTML tags
+								such as &lt;calendar&gt; or &lt;modal&gt;, tags that are specified in your HTML/JS files.
+							</p>
+							</br>
+							<p>
+								View on webcomponents.org
+							</p>
+						</div>
+					</div>
         </section>
       </section>
 
@@ -412,20 +544,59 @@
           </p>
         </section>
         <section>
+          <h3>Push Notifications</h3>
+					<div class="columns">
+						<div class="col-half">
+							<img src="img/web_push.gif">
+						</div>
+						<div class="col-half">
+							<p>
+								Push notifications are common with native applications, but there is now the ability 
+								to do them through the browser using service workers.
+							</p>
+						</div>
+					</div>
+        </section>
+        <section>
           <h3>Service Workers</h3>
           <p>
             Service workers are the replacement for app-cache, and allow developers to do caching and other things with just javascript,
             not some other format.
           </p>
+					<img src="img/serviceworker.jpg">
+
+					<aside class="notes">
+						Jake Archibald is one of the writers for the service worker spec, and he has some nice
+						talks on service workers on Youtube. That's his image from a talk he gave at Google IO 
+						last May about service workers and offline-first development.
+					</aside>
         </section>
+				<!-- Maybe another day...
+				<section>
+				  <iframe 
+					  data-autoplay
+					  class="stretch"
+						width="100%" height="600" 
+						src="https://www.youtube.com/embed/QiXLaisCq10" 
+						controls="0"
+						showinfo="0"
+						frameborder="0" allowfullscreen>
+					</iframe>
+				</section>
+				-->
         <section>
           <h3>How it Works</h3>
-          <ul>
-            <li>install</li>
-            <li>fetch</li>
-            <li>activate</li>
-            <li>message</li>
-          </ul>
+					<p>Install, Fetch, Activate, Message</p>
+					<img src="img/service_workers.png">
+
+					<aside class="notes">
+						The service worker injects itself in between the client and the network,
+						and then can do whatever it wants with a request - it could theoretically
+						redirect everything to a picture of Gandalf saying 'you shall not pass' etc.
+						Typically it will cache incoming data, then try and serve the client that
+						cached data before checking with the network for the request if it isn't in
+						the client, or if it was updated.
+					</aside>
         </section>
         <section>
           <h3>Install Event</h3>
@@ -447,6 +618,12 @@
               )
             })
           </code></pre>
+
+					<aside class="notes">
+						The install event runs when the service worker is first installed.
+						If the worker differs by even one byte, the old one is kicked out and
+						the new one is installed so it isn't crazy permanent.
+					</aside>
         </section>
         <section>
           <h3>Fetch Event</h3>
@@ -478,6 +655,11 @@
                 );
             });
           </code></pre>
+
+					<aside class="notes">
+						The fetch event is encountered whenever the client makes a request.
+						This is the big one, where the worker will usually check the cache for data.
+					</aside>
         </section>
         <section>
           <h3>Activate Event</h3>
@@ -501,6 +683,12 @@
               );
             })
           </code></pre>
+
+					<aside class="notes">
+						The activate event runs after the worker is installed.
+						This is a good place to clean out old caches to save the user space,
+						if a new cache is created (which it should be, in general).
+					</aside>
         </section>
         <section>
           <h3>Message Event</h3>
@@ -518,20 +706,27 @@
               return;
             }
           </code></pre>
-        </section>
-        <section>
-          <h3>Push Notifications</h3>
-          <p>
-            Push notifications are common with native applications, but there is now the ability to do them through the browser using
-            service workers.
-          </p>
+					
+					<aside class="notes">
+						The worker can also listen to messages from other javascript and react.
+						This code tells the waiting (installed but not active) worker to override 
+						the active worker, which it wouldn't typically do until the user navigated
+						away from the page.
+					</aside>
         </section>
         <section>
           <h3>Progressive Web Apps</h3>
           <p>
-            The culmination of all these new technologies are <strong>progressive web apps</strong>, which are a new way
-            to deliver native-like experience to mobile especially.
+            The culmination is <strong>progressive web apps</strong>.
           </p>
+					<img src="img/pwa_example.jpg">
+
+					<aside class="notes">
+						The goal by using service workers, doing offline-first development, caching,
+						push notifications, etc. is to create progressive web apps. PWAs are the web's
+						answer to native apps, as the goal is to make the web app feel no different than
+						if you had installed it from the app store. 
+					</aside>
         </section>
       </section>
       <!-- Demo -->
