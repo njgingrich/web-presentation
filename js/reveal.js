@@ -39,7 +39,7 @@
 
 			// The "normal" size of the presentation, aspect ratio will be preserved
 			// when the presentation is scaled to fit different resolutions
-			width: 1600,
+			width: 1200,
 			height: 900,
 
 			// Factor of the display size that should remain empty around the content
@@ -53,7 +53,7 @@
 			controls: true,
 
 			// Display a presentation progress bar
-			progress: true,
+			progress: false,
 
 			// Display the page number of the current slide
 			slideNumber: false,

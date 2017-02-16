@@ -1,76 +1,86 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-		<link rel="stylesheet" href="css/custom.css">
+  <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+  <link rel="stylesheet" href="css/custom.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<!-- Modern Web Development -->
-				<section>
-					<h1>Modern Web Development</h1>
-					<h4>HTML5, CSS3, Javascript, and a bit of fluff</h4>
-				</section>
-				<section>
-					<h2>Background</h2>
-					<div class="columns">
-						<div class="col-half">
-							<p>
-								There have been many advancements in HTML and CSS to improve web design,
-								and to make it easier for developers to make websites. Along with this 
-								are javascript site frameworks, and new browser APIs to make the browser
-								act more like a native part of a mobile OS or simply have more features.
-							</p>
-						</div>
-						<div class="col-half">
-							<ul>
-								<li>New layout and design techniques</li>
-								<li>Javascript frameworks</li>
-								<li>New web technology</li>
-							</ul>
-						</div>
-					</div>
-				</section>
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
 
-				<!-- HTML5 & CSS3 -->
-				<section>
-					<h2>HTML5 and CSS3</h2>
-				</section>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+</head>
 
-					<!-- HTML5 Tags -->
-					<section>
-						<h3>HTML5 Semantic Tags</h3>
-						<p>HTML5 introduced several new tags, including:</p>
-						<ul>
-							<li>section</li>
-							<li>header, footer, nav</li>
-							<li>figure, figcaption</li>
-							<li>article, section, aside</li>
-							<li>audio, video, canvas, picture</li>
-						</ul>
-						<div class="columns">
-							<div class="col-half">
-								<span class="nope-text">No more!</span>
-								<pre><code data-trim>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Modern Web Development -->
+      <section>
+        <h1>Modern Web Development</h1>
+        <h4>HTML5, CSS3, Javascript, and a bit of fluff</h4>
+      </section>
+      <section>
+        <h2>Background</h2>
+        <div class="columns">
+          <div class="col-half">
+            <p>
+              There have been many advancements in HTML and CSS to improve web design, and to make it easier for developers to make websites.
+              Along with this are javascript site frameworks, and new browser APIs to make the browser act more like a native
+              part of a mobile OS or simply have more features.
+            </p>
+          </div>
+          <div class="col-half">
+            <ul>
+              <li>New layout and design techniques</li>
+              <li>Javascript frameworks</li>
+              <li>New web technology</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- HTML5 & CSS3 -->
+      <section>
+        <h2>HTML5 and CSS3</h2>
+      </section>
+
+      <!-- HTML5 Tags -->
+      <section>
+        <h3>HTML5 Semantic Tags</h3>
+        <p>HTML5 introduced several new tags, including:</p>
+        <div class="columns">
+          <div class="col-half">
+            <ul>
+              <li>section</li>
+              <li>header, footer, nav</li>
+              <li>figure, figcaption</li>
+            </ul>
+          </div>
+          <div class="col-half">
+            <ul>
+              <li>article, section, aside</li>
+              <li>audio, video, picture</li>
+              <li>canvas</li>
+            </ul>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="col-half">
+            <span class="nope-text">No more!</span>
+            <pre><code data-trim>
 									&lt;div class="nav"&gt;
 									  &lt;ul&gt;
 									    &lt;li&gt;Item 1&lt;/li&gt;
@@ -86,10 +96,10 @@
 									  &lt;/div&gt;
 									&lt;/div&gt;
 								</code></pre>
-							</div>
-							<div class="col-half">
-								<span class="yep-text">Much better!</span>
-								<pre><code data-trim>
+          </div>
+          <div class="col-half">
+            <span class="yep-text">Much better!</span>
+            <pre><code data-trim>
 									&lt;nav&gt;
 									  &lt;ul&gt;
 									    &lt;li&gt;Item 1&lt;/li&gt;
@@ -105,67 +115,116 @@
 									  &lt;/article&gt;
 									&lt;/div&gt;
 								</code></pre>
-						</div>
-					</section>
-					<!-- Layouts -->
-					<section>
-						<section>
-							<h3>CSS Layouts</h3>
-							<p>
-								Doing layout with HTML and CSS has always been a challenge.
-								First we had tables, then floating. Now, we have more options.
-							</p>
-							<div>
-								<span class="nope-text">Table layouts?</span>
-								<img class="thumb" src="img/thumbs_down.png">
-							</div>
-							<img src="img/cusack_tables.png">
-						</section>
-						<section>
-							<h3>Flexbox</h3>
-							<p>
-								Flexbox is a new layout technique that is very intuitive and
-								makes more complicated layouts dead simple.
-							</p>
-							<img src="img/flex_direction.gif">
-						</section>
-						<section>
-							<img src="img/flex_justify.gif">
-							<img src="img/flex_align.gif">
-							<p class="credits">Images from https://medium.freecodecamp.com/an-animated-guide-to-flexbox-d280cf6afc35</p>
-						</section>
-						<section>
-							<h3>How it Works</h3>
-							<pre><code data-trim>
-								.container {
-								  display: flex;
-								  justify-content: row-reverse;
-								  align-items: center;
-								}
+          </div>
+      </section>
+      <!-- Layouts -->
+      <section>
+        <section>
+          <h3>CSS Layouts</h3>
+          <p>
+            Doing layout with HTML and CSS has always been a challenge. First we had tables, then floating. Now, we have more options.
+          </p>
+          <div>
+            <span class="nope-text">Table layouts?</span>
+            <img class="thumb" src="img/thumbs_down.png">
+          </div>
+          <img src="img/cusack_tables.png">
+        </section>
+        <section>
+          <h3>Flexbox</h3>
+          <p>
+            Flexbox is a new layout technique that is very intuitive and makes more complicated layouts dead simple.
+          </p>
+          <h3>How it Works</h3>
+          <pre><code data-trim>
+            .container {
+              display: flex;
+              justify-content: row-reverse;
+              align-items: center;
+            }
 
-								.child {
-								  flex: 1 1 250px; /* grow | shrink | basis */
-								}
-							</code></pre>
-						</section>
-						<section>
-							<h3>Vertical Centering?</h3>
-							<img src="img/vertical_centering.png">		
-							<p class="credits">Image from https://css-tricks.com/centering-css-complete-guide/</p>					
-						</section>
-						<section>
-							<h3 class="yep-text">Easy as Pie!</h3>
-							<pre><code data-trim>
+            .child {
+              flex: 1 1 250px; /* grow | shrink | basis */
+            }
+          </code></pre>
+        </section>
+        <section>
+          <img src="img/flex_direction.gif">
+          <pre><code data-trim>
+            .container {
+              display: flex;
+              justify-content: row-reverse;
+              align-items: center;
+            }
+
+            .child {
+              flex: 1 1 250px; /* grow | shrink | basis */
+            }
+          </code></pre>
+          <p class="credits">Images from https://medium.freecodecamp.com/an-animated-guide-to-flexbox-d280cf6afc35</p>
+        </section>
+        <section>
+          <img src="img/flex_justify.gif">
+          <pre><code data-trim>
+            .container {
+              display: flex;
+              justify-content: row-reverse;
+              align-items: center;
+            }
+
+            .child {
+              flex: 1 1 250px; /* grow | shrink | basis */
+            }
+          </code></pre>
+          <p class="credits">Images from https://medium.freecodecamp.com/an-animated-guide-to-flexbox-d280cf6afc35</p>
+        </section>
+        <section>
+          <img src="img/flex_align.gif">
+          <pre><code data-trim>
+            .container {
+              display: flex;
+              justify-content: row-reverse;
+              align-items: center;
+            }
+
+            .child {
+              flex: 1 1 250px; /* grow | shrink | basis */
+            }
+          </code></pre>
+          <p class="credits">Images from https://medium.freecodecamp.com/an-animated-guide-to-flexbox-d280cf6afc35</p>
+        </section>
+        <section>
+          <h3>How it Works</h3>
+          <pre><code data-trim>
+            .container {
+              display: flex;
+              justify-content: row-reverse;
+              align-items: center;
+            }
+
+            .child {
+              flex: 1 1 250px; /* grow | shrink | basis */
+            }
+          </code></pre>
+        </section>
+        <section>
+          <h3>Vertical Centering?</h3>
+          <img src="img/vertical_centering.png">
+          <p class="credits">Image from https://css-tricks.com/centering-css-complete-guide/</p>
+        </section>
+        <section>
+          <h3 class="yep-text">Easy as Pie!</h3>
+          <pre><code data-trim>
 								.container {
 								  display: flex;
 								  justify-content: center;
 								  align-items: center;
 								}
 							</code></pre>
-							<h3>Just one item centered?</h3>
-							<div class="columns">
-								<div class="col-half">
-									<pre><code data-trim>
+          <h3>Just one item centered?</h3>
+          <div class="columns">
+            <div class="col-half">
+              <pre><code data-trim>
 										<div class="container">
 										  <div>Blah</div>
 										  <div class="centered">Blah</div>
@@ -173,9 +232,9 @@
 										  <div>Blah</div>
 										</div>
 									</code></pre>
-								</div>
-								<div class="col-half">
-									<pre><code data-trim>
+            </div>
+            <div class="col-half">
+              <pre><code data-trim>
 										.container {
 											display: flex;
 											align-items: flex-start;
@@ -184,14 +243,14 @@
 											align-self: center;
 										}
 									</code></pre>
-								</div>
-							</div>
-						</section>
-						<section>
-							<h3>CSS Grid</h3>
-							<div class="columns">
-								<div class="col-half">
-									<pre><code data-trim>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3>CSS Grid</h3>
+          <div class="columns">
+            <div class="col-half">
+              <pre><code data-trim>
 										.container {
 										  display: grid;
 										  grid-gap: 10px;
@@ -214,27 +273,25 @@
 										  grid-row: 2;
 										}
 									</code></pre>
-								</div>
-								<div class="col-half">
-									<p>
-										Still an upcoming standard, CSS Grid will replace old HTML table
-										layout design and have incredible flexibility.
-									</p>
-									<img src="img/css_grid_example.png">
-								</div>
-							</div>
-							<p class="credits">Taken from http://gridbyexample.com/examples/example5/</p>
-						</section>
-					</section>
-					<!-- CSS Variables -->
-					<section>
-						<h3>CSS Variables</h3>
-						<p>
-							With the introduction of CSS variables, we can lessen the need for
-							CSS pre-processors like LESS or SASS. (which are still useful for 
-							mixins and similar).
-						</p>
-						<pre><code data-trim>
+            </div>
+            <div class="col-half">
+              <p>
+                Still an upcoming standard, CSS Grid will replace old HTML table layout design and have incredible flexibility.
+              </p>
+              <img src="img/css_grid_example.png">
+            </div>
+          </div>
+          <p class="credits">Taken from http://gridbyexample.com/examples/example5/</p>
+        </section>
+      </section>
+      <!-- CSS Variables -->
+      <section>
+        <h3>CSS Variables</h3>
+        <p>
+          With the introduction of CSS variables, we can lessen the need for CSS pre-processors like LESS or SASS. (which are still
+          useful for mixins and similar).
+        </p>
+        <pre><code data-trim>
 							:root {
 							  /* Palette generated by Material Palette - materialpalette.com/blue-grey/red */
 							  --primary-color-dark:   #455A64
@@ -251,15 +308,15 @@
 							  background: var(--primary-color-dark);
 							}
 						</code></pre>
-					</section>
+      </section>
 
-					<!-- Media queries -->
-					<section>
-						<h3>Media Queries</h3>
-						<p>
-							Media queries let CSS react differently to different-sized viewports.
-						<p>
-						<pre><code data-trim>
+      <!-- Media queries -->
+      <section>
+        <h3>Media Queries</h3>
+        <p>
+          Media queries let CSS react differently to different-sized viewports.
+          <p>
+            <pre><code data-trim>
 							.container {
 							  width: 400px;
 							  margin: 0 auto;
@@ -277,148 +334,239 @@
 							  }
 							}
 						</code></pre>
-					</section>
+      </section>
 
-					<!-- Upcoming -->
-					<section>
-						<section>
-							<h1>THE FUTURE</h1>
-						</section>
-						<!-- Things like picture -->
-						<section>
-							<h3>Better Responsiveness</h3>
-							<ul>
-								<li>Multiple images within &lt;picture&gt;</li>
-								<li>CSS grid</li>
-								<li>New Web APIs</li>
-							</ul>
-						</section>
-						<section>
-							<h3>Web Components</h3>
-							<p>
-								Already introduced with libraries like Polymer, web components
-								are a way (using the shadow DOM) to write custom HTML tags such as
-								&lt;calendar&gt; or &lt;modal&gt;, tags that are specified in 
-								your HTML/JS files.
-							</p>
-						</section>
-					</section>
-						
+      <!-- Upcoming -->
+      <section>
+        <section>
+          <h1>THE FUTURE</h1>
+        </section>
+        <!-- Things like picture -->
+        <section>
+          <h3>Fetch API</h3>
+          <p>
+            The Fetch API is a new standard for receiving data from sources, replacing XMLHttpRequest.
+          </p>
+        </section>
+        <section>
+          <h3>Web Components</h3>
+          <p>
+            Already introduced with libraries like Polymer, web components are a way (using the shadow DOM) to write custom HTML tags
+            such as &lt;calendar&gt; or &lt;modal&gt;, tags that are specified in your HTML/JS files.
+          </p>
+        </section>
+      </section>
 
-				<!-- Javascript -->
-				<section>
-					<section>
-						<h2>Javascript Frameworks</h2>
-						<p>
-							Frameworks are a way to increase developer speed, with features 
-							like web components. They also often have features like
-							linting, packing, and hot reload to make development quicker.
-						</p>
-					</section>
-					<section>
-						<h3>Popular JS Frameworks</h3>
-						<div class="columns">
-							<div style="width:30%;margin-left:20vw;display:flex;flex-direction:column;align-items:center;">
-								<img class="thumb-vert" src="img/react_logo.png">
-								<img class="thumb-vert" src="img/angular_logo.png">
-								<img class="thumb-vert" src="img/ember_logo.png">
-								<img class="thumb-vert" src="img/vue_logo.png">
-							</div>
-							<div style="width:60%;text-align:left;">
-								<ul>
-									<li>React</li>
-									<li>Angular</li>
-									<li>Ember</li>
-									<li>Vue</li>
-								</ul>
-							</div>
-						</div>
-					</section>
-					<section>
-						<h3>Vue.js</h3>
-						<p>
-							Vue JS is a framework for building web interfaces, focusing primarly
-							on the view layer. It also works well in tandem with other libraries
-							to create single page apps like the other major frameworks.
-						</p>
-						<img src="img/vue_logo.png">
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2>The New & Cool Stuff</h2>
-						<ul>
-							<li>Offline First</li>
-							<li>Service Workers</li>
-							<li>Push API</li>
-						</ul>
-					</section>
-					<section>
-						<h3>Offline First</h3>
-						<p>
-							By using service workers and caching, an offline-first approach
-							is far better for the user, both when fully offline and when in
-							'lie-fi' mode.
-						</p>
-					</section>
-					<section>
-						<h3>Service Workers</h3>
-						<p>
-							Service workers are the replacement for app-cache, and allow 
-							developers to do caching and other things with just javascript, 
-							not some other format.
-						</p>
-					</section>
-					<section>
-						<h3>Push Notifications</h3>
-						<p>
-							Push notifications are common with native applications, but there
-							is now the ability to do them through the browser using service
-							workers.
-						</p>
-					</section>
-					<section>
-						<h3>Progressive Web Apps</h3>
-						<p>
-							The culmination of all these new technologies are <strong>progressive web apps</strong>, 
-							which are a new way to deliver native-like experience to mobile especially.
-						</p>
-					</section>
-				</section>
-				<!-- Demo -->
-				<section>
-					<section>
-						<h2>Demo</h2>
-					</section>
-					<section>
-						<h3>Getting Started</h3>
-						<!-- code for registering -->
-					</section>
-					<section>
-						<h3>Going Offline</h3>
-						<!-- caching -->
-					</section>
-					<section>
-						<h3>Offline First</h3>
-						<!-- read from cache -->
-					</section>
-					<section>
-						<h3>Update Your Content</h3>
-						<!-- activate & message -->
-					</section>
-				</section>
 
-			</div>
-		</div>
+      <!-- Javascript -->
+      <section>
+        <section>
+          <h2>Javascript Frameworks</h2>
+          <p>
+            Frameworks are a way to increase developer speed, with features like web components. They also often have features like linting,
+            packing, and hot reload to make development quicker.
+          </p>
+        </section>
+        <section>
+          <h3>Popular JS Frameworks</h3>
+          <div class="columns">
+            <div style="width:30%;margin-left:20vw;display:flex;flex-direction:column;align-items:center;">
+              <img class="thumb-vert" src="img/react_logo.png">
+              <img class="thumb-vert" src="img/angular_logo.png">
+              <img class="thumb-vert" src="img/ember_logo.png">
+              <img class="thumb-vert" src="img/vue_logo.png">
+            </div>
+            <div style="width:60%;text-align:left;">
+              <ul>
+                <li>React</li>
+                <li>Angular</li>
+                <li>Ember</li>
+                <li>Vue</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3>Vue.js</h3>
+          <p>
+            Vue JS is a framework for building web interfaces, focusing primarly on the view layer. It also works well in tandem with
+            other libraries to create single page apps like the other major frameworks.
+          </p>
+          <img src="img/vue_logo.png">
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>The New & Cool Stuff</h2>
+          <ul>
+            <li>Offline First</li>
+            <li>Service Workers</li>
+            <li>Push API</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Offline First</h3>
+          <p>
+            By using service workers and caching, an offline-first approach is far better for the user, both when fully offline and when
+            in 'lie-fi' mode.
+          </p>
+        </section>
+        <section>
+          <h3>Service Workers</h3>
+          <p>
+            Service workers are the replacement for app-cache, and allow developers to do caching and other things with just javascript,
+            not some other format.
+          </p>
+        </section>
+        <section>
+          <h3>How it Works</h3>
+          <ul>
+            <li>install</li>
+            <li>fetch</li>
+            <li>activate</li>
+            <li>message</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Install Event</h3>
+          <pre><code data-trim>
+            self.addEventListener('install', event => {
+              event.waitUntil(
+                // open a cache for the files
+                global.caches.open(CACHE_NAME)
+                  .then((cache) => {
+                    return cache.addAll(assetsToCache)
+                  })
+                  .then(() => {
+                    console.log('Cached assets: main', assetsToCache)
+                  })
+                  .catch((error) => {
+                    console.error(error);
+                    throw error;
+                  }),
+              )
+            })
+          </code></pre>
+        </section>
+        <section>
+          <h3>Fetch Event</h3>
+          <pre><code data-trim>
+            self.addEventListener('fetch', function(event) {
+              event.respondWith(
+                caches.match(event.request).then((response) => {
+                    // Cache hit - return response
+                    if (response) return response;
+                    
+                    // IMPORTANT: Clone the request
+                    var fetchRequest = event.request.clone();
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+                    return fetch(fetchRequest).then((response) => {
+                        // Check if we received a valid response
+                        if(!response || response.status !== 200 || response.type !== 'basic') {
+                          return response;
+                        }
+                        // IMPORTANT: Clone the response
+                        var responseToCache = response.clone();
+                        
+                        caches.open(CACHE_NAME).then((cache) => {
+                            cache.put(event.request, responseToCache);
+                          });
+                        return response;
+                      }
+                    );
+                  })
+                );
+            });
+          </code></pre>
+        </section>
+        <section>
+          <h3>Activate Event</h3>
+          <pre><code data-trim>
+            self.addEventListener('activate', (event) => {
+              // Clean the caches
+              event.waitUntil(
+                global.caches.keys().then((names) => {
+                  console.log('cleaning caches')
+                  return Promise.all(
+                    // Ignore caches that aren't ours, and not the current cache
+                    // But delete all the rest to free up space
+                    names.filter(name => {
+                      return (name.startsWith('static-') &&
+                              name != CACHE_NAME);
+                    }).map(name => {
+                      return caches.delete(name)
+                    })
+                  );
+                })
+              );
+            })
+          </code></pre>
+        </section>
+        <section>
+          <h3>Message Event</h3>
+          <pre><code data-trim>
+            // sw.js
+            self.addEventListener('message', (event) => {
+              if (event.data.action === 'skipWaiting') {
+                self.skipWaiting();
+              }
+            })
 
-		<script>
+            // main.js
+            if (reg.waiting) {
+              reg.waiting.postMessage({action: 'skipWaiting'});
+              return;
+            }
+          </code></pre>
+        </section>
+        <section>
+          <h3>Push Notifications</h3>
+          <p>
+            Push notifications are common with native applications, but there is now the ability to do them through the browser using
+            service workers.
+          </p>
+        </section>
+        <section>
+          <h3>Progressive Web Apps</h3>
+          <p>
+            The culmination of all these new technologies are <strong>progressive web apps</strong>, which are a new way
+            to deliver native-like experience to mobile especially.
+          </p>
+        </section>
+      </section>
+      <!-- Demo -->
+      <section>
+        <section>
+          <h2>Demo</h2>
+        </section>
+        <section>
+          <h3>Getting Started</h3>
+          <!-- code for registering -->
+        </section>
+        <section>
+          <h3>Going Offline</h3>
+          <!-- caching -->
+        </section>
+        <section>
+          <h3>Offline First</h3>
+          <!-- read from cache -->
+        </section>
+        <section>
+          <h3>Update Your Content</h3>
+          <!-- activate & message -->
+        </section>
+      </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
-
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
@@ -428,5 +576,6 @@
 				]
 			});
 		</script>
-	</body>
+</body>
+
 </html>
